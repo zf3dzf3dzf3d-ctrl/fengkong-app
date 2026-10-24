@@ -1,0 +1,8 @@
+# 峰控助手 Termux 定时任务
+# 晨报：每天 7:00
+0 7 * * * bash $HOME/scripts/morning_report.sh >> $HOME/scripts/cron.log 2>&1
+# 记忆备份：每天 23:30 推到 PC
+30 23 * * * bash $HOME/scripts/sync_memory.sh push >> $HOME/scripts/cron.log 2>&1
+# 桥看门狗：每 5 分钟检查心跳，桥死了自动重拉（解决「桥不开机自启、死了没人管」）
+# 这是唯一看门狗；曾有 watchdog_bridge.sh，因心跳文件名/阈值与 boot 不一致、功能重叠，已废弃删除，勿再启用。
+*/5 * * * * bash $HOME/scripts/boot_bridge.sh >> $HOME/scripts/cron.log 2>&1

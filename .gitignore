@@ -1,0 +1,10 @@
+.gradle/
+app/build/
+build/
+*.log
+*.idsig
+local.properties
+_bak_outside_assets/
+*.apk
+*.keystore
+*.bak.*
