@@ -3,7 +3,7 @@
 > README 修订前必须对照本文件核对，杜绝「文案声称 ≠ 仓库事实」。
 
 ## 已跟踪内容（git ls-files 核准）
-- Android 工程：app/（Kotlin，AGP 8.5.2，minSdk 26）
+- Android 工程：app/（Kotlin，AGP 8.5.2，minSdk 24 / targetSdk 34，实测 build.gradle.kts）
 - termux_bridge 脚本
 - README.md、docs/、.gitignore
 
@@ -19,3 +19,6 @@
 ## 遗留事项
 - git remote 为空：等用户提供 GitHub/Gitee 地址后推送，消除单机单点风险
 - 仓库外 `_回收_手机端残留\`（手机版/手机端 旧目录）：待独立仓稳定运行一段时间后可整体删除
+
+## 安全边界（对外表述必读）
+- Termux 桥（bridge/、手机端-termux_bridge/）目前**无 token/鉴权机制**，仅限同一局域网内使用；对外文案不得宣称"公网安全遥控"，README 中如写遥控电脑须带「局域网」限定词。
