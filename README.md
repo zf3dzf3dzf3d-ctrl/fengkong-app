@@ -10,7 +10,7 @@
 [![Latest](https://img.shields.io/badge/release-v93-orange)]()
 [![Repo](https://img.shields.io/badge/status-independent--repo-success)]()
 
-*一个 App，就是完整的「朱峰社区智能体无限」——与 PC 版同一大脑、同一账号、几乎同一界面。*
+*一个 App，就是完整的「朱峰社区智能体无限」——控制手机、遥控电脑，与 PC 版同一大脑、同一账号。*
 
 </div>
 
@@ -18,8 +18,10 @@
 
 ## ✨ 为什么做这个项目
 
-PC 端智能体已经很强，但人不会一直坐在电脑前。**峰控手机智能体**把整套智能体能力装进 Android 手机：
+PC 端智能体已经很强，但人不会一直坐在电脑前。**峰控手机智能体**把整套智能体能力装进 Android 手机，让它成为**双向遥控枢纽**：
 
+- 📱 **控制手机** — 通过无障碍服务（AccessibilityService）读屏/操作，智能体可以直接控制手机上的 App 完成任务
+- 🖥️ **反向遥控电脑** — Termux 桥接通道直通 PC 端主仓智能体，人在外面用手机就能指挥家里的电脑干活
 - 🧠 **同一大脑** — 直连社区 LLM / 自有 API，手机端与 PC 端共享账号与上下文
 - 🖥️ **界面零开发** — Android WebView 壳直接加载智能体 Web UI，PC 端界面升级手机端自动跟进
 - 🔌 **原生能力桥** — 通过 `NativeBridge (window.ZFMobile)` 暴露原生接口，逐步解锁手机独有能力
