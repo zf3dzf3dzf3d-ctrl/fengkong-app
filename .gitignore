@@ -8,3 +8,7 @@ _bak_outside_assets/
 *.apk
 *.keystore
 *.bak.*
+
+# === private dir and output dir: never upload ===
+private/
+public_*/
